@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    
+}
+
+/*/////////////Home page///////////////*/
+
+.Hbackground {
+    opacity: 0.6;
+    position: absolute;
+    height: 100vh;
+}
+
+.wrapper {
+    margin: 30vh 0;
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+    position: relative;
+    font-family: Muli;
+}
+
+.home-title {
+    text-shadow: 2px 2px 2px #555555;
+    font-family: Comfortaa;
+}
+
+.home-desc {
+    padding: 1vh 10vw;
+    text-shadow: 2px 2px 10px #333333;
+}
+.home-desc p {
+    margin: 0;
+}
+
+.home-button {
+    padding-top: 20vh;
+    font-size: 5.5vw;
+    text-shadow: 2px 2px 2px #555555;
+}
+
+
+/*/////////////Main page///////////////*/
+
+.main-wrapper {
+    background-color: #E7E7E5;
+    height: 100vh;
+}
+
+.middle {
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: ". a .";
+    position: relative;
+    bottom: 3.5vh;
+}
+
+.lable {
+    background-color: #E7E7E5;
+    width: 15em;
+    grid-area: a;
+    font-family: Comfortaa;
+}
+.lable > h2 {
+    margin: 0;
+    padding: 5% 0;
+}
+.lable > h2 > span {
+    border: 2px solid #666666;
+    padding: 2px 3px;
+}
+
+.bottom {
+    font-family: Muli;
+}
+
+.bottom h3 {
+    font-size: 6vw;
+    margin: 4vh 10vw;
+    margin-bottom: 1vh;
+}
+
+.input {
+    text-align: center;
+}
+
+.bottom select {
+    width: 80vw;
+    height: 5vh;
+    font-size: 5vw;
+}
+
+
+.foot-nav {
+    height: 3.5em;
+    position: absolute;
+    top: 92vh;
+}
+
+.foot-nav #explore {
+    
+    display: inline;
+    background-color: purple;
+    font-size: auto;
+    font-family: Muli;
+    color: white;
+    background-color: #855E81; 
+    border: none; 
+    font-size: 1.19em;
+    border-radius: 5px;
+    font-weight: normal;
+    
+}
+
+
+/*/////////Results Page///////////*/
+
+
+.trail-info {
+    font-family: Muli;
+    color: black;
+    display: grid;
+    grid-template-rows: 75px 1fr 1fr;
+/*
+    grid-template-areas: "1"
+                         "2"
+                         "3";
+*/
+}
+
+.trail-info h2 {
+    font-size: 8.5vw;
+    
+/*    grid-area: 1;*/
+}
+
+.trail-info .hours , .difficulty, .loca {
+    font-size: 1.5em;
+    margin: 0 5vw;
+}
+
+.trail-info p {
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 0 5px;
+}
+
+ol {
+    color: #855E81;
+    background-color: #E7E7E5;
+}
+
+#CoryPassPage {
+/*    visibility: hidden;*/
+}
+
+
+
+
+
+

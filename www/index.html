@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
+        width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>Trail Blazer</title>
+        
+        <link rel="stylesheet" href="css/kendo.mobile.all.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/css.css">
+    </head>
+    <body>
+        
+<!--------- Home page --------->
+        <div data-role="view" data-layout="default" id="home" data-title="Home">
+            <div class="Hbackground" style="background-color: blue;">
+                <img src="img/Moraine-Lake-img.jpg" class="bimage" style="height:100%">
+            </div>
+            <div class="wrapper">
+                <div class="home-info">
+                    <div class="home-title">
+                        <h1>Trail Blazer</h1>
+                    </div>
+                    <div class="home-desc">
+                        <p>Find the perfect hiking trail for your next trip to the Rockies</p>
+                    </div>
+                </div>
+                <div class="home-button">
+                    <a data-role="button" href="#main" id="hbutton" style="background-color: #855E81; border: none; padding: 5% 10%; border-radius: 8px;">Get Started</a>
+                </div>
+            </div>
+            
+        </div>
+        
+<!--------- Main page --------->
+        <div data-role="view" data-layout="default" id="main" data-title="Plan Your Route">
+            <div class="main-wrapper">
+            <header data-role="header">
+                <div data-role="navbar" class="main-nav">
+                    <a data-role="backbutton" data-align="left" style="color: #855E81"></a>
+                    <span class="Main-title"></span>
+                </div>
+            </header>
+            
+            <main>
+                <div class="top">
+                    <div class="image" style="height: 35vh; overflow: hidden">
+                        <img src="img/Moraine-Lake-img.jpg" alt="Morain Lake" style="width: 100%">
+                    </div>
+                </div>
+
+                <div class="middle">
+                    <div class="lable">
+                        <h2><span>Plan Your Route</span></h2>
+                    </div>
+                    
+                </div>
+
+                <div class="bottom">
+                    <div class="location">
+                        <h3 style="margin-top: 0;">Location</h3>
+                        <div class="input">
+                            <select id="loc-input">
+                                <option value="Select" selected="selected">Select</option>
+                                <option value="Banff">Banff</option>
+                                <option value="Canmore">Canmore</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="difficulty">
+                        <h3>Difficulty</h3>
+                        <div class="input">
+                            <select id="diff-input">
+                                <option value="Select">Select</option>
+                                <option value="Easy">Easy</option>
+                                <option value="Moderate">Moderate</option>
+                                <option value="Hard">Hard</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="legnth">
+                        <h3>Legnth</h3>
+                        <div class="input">
+                            <select id="leg-input">
+                                <option value="Select">Select</option>
+                                <option value="1 - 4 hours">1 - 4 hours</option>
+                                <option value="5+ hours">5+ hours</option>
+                            </select>
+                        </div>
+                    </div>    
+                </div>
+            </main>
+            
+            <footer data-role="footer">
+                <div data-role="navbar" class="main-nav foot-nav" style="background-color: #E7E7E5; border-width: 0;">
+                    <a data-role="button" href="#results" id="explore">Explore</a>
+                </div>
+            </footer>
+            </div>
+        </div>
+        
+<!--------- Results page --------->
+        
+        <div data-role="view" data-layout="default" id="results" data-title="Suggestions">
+            
+            <header data-role="header">
+                <div data-role="navbar">
+                    <span class="results-title" style="font-family: Comfortaa;">Our Suggestions</span>
+                    <a data-role="backbutton" data-align="left" id="backmain" style="color: #855E81"></a>
+                    
+                </div>
+            </header>
+            
+            <main style="height: 100vh; background-color: #E7E7E5">
+                <div data-role="scrollview" data-content-height="85vh" data-pager-overlay="true">
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="background: #E7E7E5;" id="MoraineLakePage">
+                        
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/Moraine-Lake-img.jpg" alt="Morain Lake" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Moraine Lake</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff National Park</p></div>
+                                <div class="hours">Legnth: <p>1-2 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Easy</p></div>
+                            </div>
+                            <div class="filler"></div>
+                        </div>
+                    </div>
+                    
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="background: #E7E7E5;" id="SixGlaciersPage">
+                        
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/plain-of-six-of-glaciers-tea-house.jpg" alt="SixGlaciers" style="height: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Plain of Six Glaciers</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff National Park</p></div>
+                                <div class="hours">Legnth: <p>4-6 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Easy</p></div>
+                            </div>
+                            <div class="filler"></div>
+                        </div>
+                    </div>
+                    
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="background: #E7E7E5;" id="SaddlebackPage">
+                        
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/Saddleback_04.jpg" alt="Saddleback" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Saddleback Pass</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff National Park</p></div>
+                                <div class="hours">Legnth: <p>3-4 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Moderate</p></div>
+                            </div>
+                            <div class="filler"></div>
+                        </div>
+                    </div>
+                    
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="background-color: #E7E7E5;" id="CascadePage">
+                        
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/cascadeAmp.jpg" alt="cascade" style="height: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Cascade Amphitheatre</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff National Park</p></div>
+                                <div class="hours">Legnth: <p>4-6 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Moderate</p></div>
+                            </div>
+                            <div class="filler"></div>
+                        </div>
+                        
+                    </div>
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="CoryPassPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/coryPass.jpg" alt="cory" style="height: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Cory Pass</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff National Park</p></div>
+                                <div class="hours">Legnth: <p>5-6 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Hard</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="AylmerPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/aylmer.jpg" alt="aylmer" style="height: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Aylmer Lookout</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff National Park</p></div>
+                                <div class="hours">Legnth: <p>7-8 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Hard</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="GrassiPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/grassi.jpg" alt="grassi" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Grassi Lakes Trail</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>1-2 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Easy</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="ChesterPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/ChesterLake.jpg" alt="chester" style="height: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Chester Lake</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>4-5 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Easy</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="PrairiePage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/prairie.jpg" alt="prairie" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Prairie View Lookout</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>3-4 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Moderate</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="HaLingPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/haling-peak-121.jpg" alt="haling" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Ha Ling Peak</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>4-5 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Moderate</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="YamnuskaPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/YamnuskaMountain.jpg" alt="yamnuska" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Mount Yamnuska</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>3-4 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Hard</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+<!--///////////////////////////////////////-->
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="LadyPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/Lady.jpg" alt="lady" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Lady MacDonald</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>5-8 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Hard</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+<!--///////////////////////////////////////-->                    
+                    
+<!--
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="AgnesPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/lake_agnes.jpg" alt="agnes" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Lake Agnes Teahouse</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff</p></div>
+                                <div class="hours">Legnth: <p>3-4 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Easy</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="HelenPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/helen-lake-trail.jpg" alt="helen" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Helen Lake</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff</p></div>
+                                <div class="hours">Legnth: <p>4-5 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Easy</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="LarchPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/larch.jpg" alt="larch" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Larch Valley</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff</p></div>
+                                <div class="hours">Legnth: <p>3-4 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Moderate</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="BourgPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/Bourgeau_Lake_Trail.jpg" alt="Bourg" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Bourgeau Lake</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff</p></div>
+                                <div class="hours">Legnth: <p>5-6 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Moderate</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="SunshinePage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/sunshine-meadows-deck.jpg" alt="sunshine" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Sunshine Meadows</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff</p></div>
+                                <div class="hours">Legnth: <p>3-4 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Hard</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="AbbotPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/Abbot-Pass.jpg" alt="abbot" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Abbot Pass</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Banff</p></div>
+                                <div class="hours">Legnth: <p>5-6 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Hard</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="BowPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/Bow.jpg" alt="bow" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Bow River Trail</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>1-4 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Easy</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="UpperkanPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/upperKan.jpg" alt="upperkan" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Upper Kananaskis Lake</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>4-5.5 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Easy</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="BurstallPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/burstall.jpg" alt="bur" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Burstall Pass</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>3-5 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Moderate</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="bullPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/Buller-Pass.jpg" alt="bull" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Bullers Pass</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>5-7 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Moderate</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="KingPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/kingcreek.jpg" alt="king" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">King Creek Ridge</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>3-5 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Hard</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div data-role="page" style="height:100%; background-color: #E7E7E5;" id="CentennPage">
+                        <div class="image" style="height: 35vh; overflow: hidden">
+                            <img src="img/Centennial-Pass.jpg" alt="centenn" style="width: 100%">
+                        </div>
+                        <div class="trail-info">
+                            <h2 class="tname">Centennial Pass</h2>
+                            <div class="disp">
+                                <div class="loca">Location: <p>Canmore</p></div>
+                                <div class="hours">Legnth: <p>7-9 hours</p></div>
+                                <div class="difficulty">Difficulty: <p>Hard</p></div>
+                            </div>
+                            <div class="filler"></div>
+                            
+                        </div>
+                    </div>
+-->
+                    
+<!--///////////////////////////////////////-->                    
+                    
+                </div>
+            </main>
+            
+        </div>
+        
+        
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/kendo.ui.core.min.js"></script>
+        <script>
+            var app = new kendo.mobile.Application();
+        </script>
+        
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
